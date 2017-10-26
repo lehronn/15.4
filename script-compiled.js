@@ -29,13 +29,6 @@ console.log(multiply(3));
 //w ciele funkcji b jest z góry zdefiniowane, jeśli przy wywołaniu je nadpiszemy to mamy funkcjonalność na której nam zależy.
 
 //ZADANIE 3.
-// const average = (...args) => {
-//   const result = args.reduce(
-//     function (x, y) {
-//       return x + y}, 0
-//   );
-// 	return result/args.length;
-// };
 
 var average = function average() {
   for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
