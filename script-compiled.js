@@ -1,20 +1,22 @@
 'use strict';
 
-var firString = 'Hello',
-    secString = 'World',
+var firstWord = 'Hello',
+    secondWord = 'World',
     grades = [1, 5, 5, 5, 4, 3, 3, 2, 1],
     names = [1, 4, 'Iwona', false, 'Nowak'];
 
 var a = void 0,
-    b = void 0;
+    b = void 0,
+    x = void 0,
+    y = void 0;
 
 //ZADANIE 1.
-function sayHelloTo(firString, secString) {
-  console.log(firString + ' ' + secString + '!');
+function sayHelloTo(firstWord, secondWord) {
+  console.log(firstWord + ' ' + secondWord + '!');
 };
 
 console.log('=== zadanie 1. ze szablonami ${}:');
-sayHelloTo(firString, secString);
+sayHelloTo(firstWord, secondWord);
 
 //ZADANIE 2.
 var multiply = function multiply(a) {
@@ -27,6 +29,14 @@ console.log(multiply(3));
 //w ciele funkcji b jest z góry zdefiniowane, jeśli przy wywołaniu je nadpiszemy to mamy funkcjonalność na której nam zależy.
 
 //ZADANIE 3.
+// const average = (...args) => {
+//   const result = args.reduce(
+//     function (x, y) {
+//       return x + y}, 0
+//   );
+// 	return result/args.length;
+// };
+
 var average = function average() {
   for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
     args[_key] = arguments[_key];
@@ -34,7 +44,7 @@ var average = function average() {
 
   var result = args.reduce(function (x, y) {
     return x + y;
-  }, 0);
+  });
   return result / args.length;
 };
 
